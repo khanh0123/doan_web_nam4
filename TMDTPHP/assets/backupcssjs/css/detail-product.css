@@ -1,0 +1,229 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body#top {
+    background-color: #ffffff;
+    color: black !important;
+}
+#top.display-category,#top.display-search{
+  background: #1b1b1b;color:white !important;
+}
+
+
+.quantity_title {
+  height: 34px;
+  line-height: 34px;
+  display:inline-block;
+  vertical-align: top;
+}
+.quantity {
+  position:relative;
+  display:inline-block;
+  width: 70px;
+}
+.quantity .qty {
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  border: 0;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+  background-color: #fff;
+  text-indent: 20px;
+  width: 100%;
+  margin-bottom: 0;
+}
+.quantity .plus,
+.quantity .minus {
+  position:absolute;
+  border: 1px solid #dedede;
+  height: 17px;
+  width: 17px;
+  padding: 0;
+  text-align:center;
+  line-height: 15px;
+  background-color: #fff;
+  font-size: 16px;
+  transition: background-color .2s linear;
+  -webkit-transition: background-color .2s linear;
+  -o-transition: background-color .2s linear;
+  right: 0;
+}
+.quantity .plus {
+  border-bottom: 0;
+  top: 0;
+}
+.quantity .minus {
+  bottom: 0;
+}
+.quantity .plus:hover,
+.quantity .minus:hover { background-color: #DDD; }
+
+.quantity .qty:focus,
+.quantity .plus:focus,
+.quantity .minus:focus {
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+.line{
+  clear: both;
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  border-top: 1px solid #EEE;
+}
+.product-name {
+  font-size: 22px;
+  color: #222;
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 600;
+  }
+.product-code{
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    margin-bottom: 12px;
+    display: block;
+  }
+.product-price h3{
+    color: #ed4545;
+    padding-left: 0;
+    font-size: 30px;
+    font-weight: 300;
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+.buynow{
+    margin: 15px 0 0 0;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #d61c1f;
+    height: auto;
+    line-height: 1;
+    padding: 12px 0;
+  }
+.pd_policies_title {
+  background: #f6f6f6;
+  padding: 10px;
+  border-top: 1px solid #e0e0e0;
+  margin-bottom: 10px; }
+.pd_policies_title h5 {
+    color: #288f06;
+    margin-bottom: 2px; }
+.pd_policies_title span {
+    display: block;
+    text-indent: 2px; }
+
+.pd_tech h4 {
+  font-size: 20px;
+  color: #050505;
+  font-weight: 300; }
+
+.pd_tech .pd_tech_table ul {
+  padding-left: 0; 
+}
+
+.pd_tech .pd_tech_table li {
+  margin-bottom: 10px;
+  border-bottom: 1px dotted; 
+}
+.pd_tech .pd_tech_table li b, .pd_tech .pd_tech_table li span {
+    padding: 2px 0 2px 15px;
+    display: inline-block;
+    position: relative; 
+}
+.pd_tech .pd_tech_table li b {
+    width: 130px;
+    background: #ffc331;
+    color: #333333; 
+}
+.pd_tech .pd_tech_table li b:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-right: 25px solid #fff;
+      border-bottom: 25px solid transparent;
+  }
+.pd_specs {
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: -webkit-flex;
+  display: flex;
+  border: 1px solid #d6d6d6; }
+.pd_specs li {
+    text-align: center;
+    font-size: 15px;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    flex: 1;
+    padding: 5px 10px;
+    border-right: 1px solid #d6d6d6; }
+.pd_specs li:last-child {
+      border-right: 0; }
+.pd_specs li span, .pd_specs li strong {
+      display: block; }
+
+.pd_policies h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #288f06; }
+
+.pd_policies.style_1 > ul > a {
+      line-height: 20px;
+      vertical-align: bottom;
+      font-size: 12px; }
+.pd_policies.style_1 > ul > a > img {
+        width: 20px;
+        margin-right: 5px; }
+
+.pd_policies.style_2 > ul {
+  padding-left: 0;
+  margin-bottom: 10px; }
+.pd_policies.style_2 > ul > li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; }
+.pd_policies.style_2 > ul > li a {
+      display: block;
+      padding-left: 45px; }
+.pd_policies.style_2 > ul > li img {
+      float: left;
+      margin-left: -45px; }
+.pd_policies.style_2 > ul > li .policies_tit {
+      float: left;
+      font-weight: 600;
+      font-size: 13px;
+      color: #333; }
+.pd_policies.style_2 > ul > li .policies_descrip {
+      float: left;
+      color: #666;
+      font-size: 12px; }
+li.clearfix {
+    list-style:  none;
+}
+.list-group i{
+  color:black;
+}
+nav.navbar.navbar-expand-lg.bg-dark.navbar-dark.menu-top{
+  background: black !important;
+}
+body,html{
+  width: 100%;
+  color: black !important;
+  height: auto !important;
+}
+div#header{
+  position: relative !important;
+}
+h5.product-size,.product-count {
+    font-size:  14px;
+}
+img.img-big {
+    width:  100%;
+}
