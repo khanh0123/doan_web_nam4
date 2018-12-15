@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 			<?php if(array_search("product", $uri) > -1 && (array_search("add", $uri) > -1) || array_search("edit", $uri) > -1 ): ?>
 			<!-- dropzone -->
 			<script src="<?php echo base_url(); ?>vendor/js/dropzone.js"></script>
-			<script src="<?php echo base_url(); ?>assets/js/setupdropzone.js"></script>
+			<script src="<?php echo base_url(); ?>assets/js/setupdropzone.min.js"></script>
 			<!-- admin js -->
 			<?php endif ?>
 

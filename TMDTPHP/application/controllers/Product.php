@@ -35,12 +35,13 @@ class Product extends CI_Controller {
 
 		} else {
 			$data_category = $this->category_model->get();
-			$dataproduct[0]['detail'] = json_decode($dataproduct[0]['detail'],true);
+			$dataproduct[0]['detail'] = json_decode($dataproduct[0]['detail'],true);			
 			$data = array(
 				'product' => $dataproduct,
 				'countcart'=>$this->totalcart(),
 				'publickeycaptcha' => !empty($publickey) ? $publickey : '',
 				'category' => $data_category,
+				'url' => base_url().'sanpham/'.$dataproduct[0]['id'].(!empty($dataproduct[0]['seo-link']) ? '.'.$dataproduct[0]['seo-link'] : '')
 			);
 			$this->load->view('product/detail_view', $data);
 		}

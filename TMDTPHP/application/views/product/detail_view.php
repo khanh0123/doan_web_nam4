@@ -170,7 +170,7 @@
 					</span>
 					<?php for( $i = 0 ;$i < count($value['detail']['seo-keywords']) ; $i++ ): ?>
 
-						<a onclick="return false;" href="#" rel="tag"><?= str_replace("-", " " , $value['detail']['seo-keywords'][$i]) ?></a>
+						<a href="<?= base_url().'/tim-kiem.html?q='.str_replace('-', ' ' , $product[0]['detail']['seo-keywords'][$i]) ?>" rel="tag"><?= str_replace("-", " " , $value['detail']['seo-keywords'][$i]) ?></a>
 
 					<?php endfor; ?>
 				</p>
@@ -183,6 +183,7 @@
 
 
 		</div>
+		<div class="fb-comments" data-href="<?= $url ?>" data-numposts="5"></div>
 		<div class="signup-newletter">
 			
 		</div>

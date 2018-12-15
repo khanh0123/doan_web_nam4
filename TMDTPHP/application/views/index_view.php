@@ -78,7 +78,7 @@
 			<div class="title mt-3 row">
 				<h3 class="title-center">
 					<b></b>
-					<span class="title-main "><img class="image-load" src='' data-src="<?php echo base_url(); ?>assets/images/gif/new.gif" alt="ico sản phẩm mới">Hàng Mới Về <img class="image-load" src='' data-src="<?php echo base_url(); ?>assets/images/gif/new.gif" alt="ico sản phẩm mới"></span>
+					<span class="title-main "><img class="" src="<?php echo base_url(); ?>assets/images/gif/new.gif" alt="ico sản phẩm mới">Hàng Mới Về <img class="" src="<?php echo base_url(); ?>assets/images/gif/new.gif" alt="ico sản phẩm mới"></span>
 					<b></b>
 				</h3>
 			</div>
@@ -91,7 +91,7 @@
 				<div class="col-lg-3 col-md-3 col-sm-3 col-6 product_new mt-3 mb-3">
 					<div class="image-product">
 						<a href="<?= $link ?> ">
-							<img class="image-load" src='' data-src="<?php echo $value['detail']['images'][0] ?>"  alt="<?= $value['detail']['name'] ?>">
+							<img class="image-load" src="http://ipl.uv.es/thamazon/gvapps/wamazon/resources/images/loading.gif" data-src="<?php echo $value['detail']['images'][0] ?>"  alt="<?= $value['detail']['name'] ?>">
 							<noscript><img src="<?php echo $value['detail']['images'][0] ?>" alt="<?= $value['detail']['name'] ?>"></noscript>
 							<div class="bg-black-op" title="Xem chi tiết sản phẩm"></div>
 						</a>
@@ -120,7 +120,7 @@
 			<div class="title mt-3">
 				<h3 class="title-center">
 					<b></b>
-					<span class="title-main ">Bán chạy <img class="image-load" src='' data-src="<?php echo base_url(); ?>assets/images/gif/hot.gif" alt="giảm giá" width="20%"></span>
+					<span class="title-main ">Bán chạy <img src="<?php echo base_url(); ?>assets/images/gif/hot.gif" alt="giảm giá" width="20%"></span>
 					<b></b>
 				</h3>
 			</div>
@@ -132,7 +132,7 @@
 
 				<div class="item mb-3 mt-3">
 					<a href="<?= $link ?> ">
-						<img class="image-load" src='' data-src="<?php echo $value['detail']['images'][0] ?>" alt="<?= $value['detail']['name'] ?>">
+						<img class="image-load" src="http://ipl.uv.es/thamazon/gvapps/wamazon/resources/images/loading.gif" data-src="<?php echo $value['detail']['images'][0] ?>" alt="<?= $value['detail']['name'] ?>">
 						<noscript><img src="<?php echo $value['detail']['images'][0] ?>" alt="<?= $value['detail']['name'] ?>"></noscript>
 					</a>
 					<div class="name_product"><a href="<?= $link ?> "><?= $value['detail']['name'] .' - '. $value['detail']['color'][0]  .' - ' . $value['detail']['size'][0]?></a></div>
@@ -157,7 +157,7 @@
 				<h3 class="title-center">
 
 					<b></b>
-					<span class="title-main ">Đang giảm giá <img class="image-load" src='' data-src="<?php echo base_url(); ?>assets/images/gif/sale.gif" alt="giảm giá" width="20%"></span>
+					<span class="title-main ">Đang giảm giá <img class="image-load" src="http://ipl.uv.es/thamazon/gvapps/wamazon/resources/images/loading.gif" data-src="<?php echo base_url(); ?>assets/images/gif/sale.gif" alt="giảm giá" width="20%"></span>
 					<b></b>
 				</h3>
 			</div>
@@ -170,7 +170,7 @@
 				<div class="col-lg-3 col-md-3 col-sm-3 col-6 product_new mt-3 mb-3">
 					<div class="image-product">
 						<a href="<?= $link ?> ">
-							<img class="image-load" src='' data-src="<?php echo $value['detail']['images'][0] ?>"  alt="<?= $value['detail']['name'] ?>">
+							<img class="image-load" src="http://ipl.uv.es/thamazon/gvapps/wamazon/resources/images/loading.gif" data-src="<?php echo $value['detail']['images'][0] ?>"  alt="<?= $value['detail']['name'] ?>">
 							<noscript><img src="<?php echo $value['detail']['images'][0] ?>" alt="<?= $value['detail']['name'] ?>"></noscript>
 							<div class="bg-black-op" title="Xem chi tiết sản phẩm"></div>
 						</a>
@@ -273,10 +273,10 @@
 	<script>
 
 		window.addEventListener("DOMContentLoaded", function(event) {
-				images = document.querySelectorAll(".image-load[src='']");
+				images = document.querySelectorAll('.image-load[src="http://ipl.uv.es/thamazon/gvapps/wamazon/resources/images/loading.gif"]');
 				lazyload(images);
 				let interval = setInterval(function() {
-					images = document.querySelectorAll(".image-load[src='']");					
+					images = document.querySelectorAll('.image-load[src="http://ipl.uv.es/thamazon/gvapps/wamazon/resources/images/loading.gif"]');					
 					images.length > 0 ? lazyload(images) : clearInterval(interval);
 				}, 2000);			
 			

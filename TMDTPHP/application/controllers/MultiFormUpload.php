@@ -37,7 +37,7 @@ class MultiFormUpload {
 	{
 		$upload_stt = 1;
 		$target_dir = $this->folderurl;
-		$target_file = $target_dir . $this->file['name'];
+		$target_file = $target_dir . time()."-".$this->file['name'];		
 
 		$type = $this->file['type'];
 		$match = ['image/jpg','image/jpeg','image/gif','image/png'];
@@ -58,7 +58,7 @@ class MultiFormUpload {
 
 		}
 		if(move_uploaded_file($this->file['tmp_name'], $target_file)){
-			$this->result = base_url().$this->folderurl.$this->file['name'];
+			$this->result = "/".$target_file;
 			return true;
 		}
 		else{

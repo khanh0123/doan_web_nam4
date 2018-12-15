@@ -293,7 +293,7 @@ class Homepage extends CI_Controller {
 	public function searchProduct()
 	{
 		define("numperpage", 10);
-		$query = isset($_GET['q']) ? $_GET['q'] : '';
+		$query = isset($_GET['q']) ? preg_replace("/(?![a-zA-Z0-9.\ ].*$)/","",$_GET['q'])  : '';
 		$page = isset($_GET['p']) ? $_GET['p'] : 1;
 		$data_category = $this->category_model->get();
 
@@ -333,7 +333,7 @@ class Homepage extends CI_Controller {
 			$pos3 = strpos($link,"/", $pos2 + strlen("/"));
 			$link = substr($link,$pos3+1);
 		}
-		return $link;
+		return "/".$link;
 	}
 	private function totalCart()
 	{
