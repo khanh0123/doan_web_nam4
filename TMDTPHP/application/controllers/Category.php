@@ -8,6 +8,7 @@ class Category extends CI_Controller {
 		parent::__construct();
 		//Load Dependencies
 		$this->load->model('category_model');
+		$this->load->model('product_model');
 
 	}
 	public function control()
@@ -15,6 +16,17 @@ class Category extends CI_Controller {
 		if( $this->session->has_userdata('username') && 
 				( $this->session->userdata('role') == 'admin' || $this->session->userdata('role') == 'mod' ) ) {
 			$data = $this->category_model->get();
+
+		foreach ($data as $key => $value) {
+			$where = [
+				'category' => $value['id']
+			];
+			$data_product = $this->product_model->get($where);
+			$data[$key]['count'] = count($data_product);
+		}
+
+
+		
 			$data = array(
 				'category' => $data
 			);
@@ -137,20 +149,27 @@ class Category extends CI_Controller {
 				$security = $this->input->post('security');
 
 				if($this->session->has_userdata('security') && $this->session->userdata('security') == $security) {
-
-					$where = array(
-						'id' => $id
-					);
-					if($this->category_model->delete($where)){
-
-						$success = "Xóa thành công";
+					$where = [
+						'category' => $id
+					];
+					$data_product = $this->product_model->get($where);
+					if(count($data_product) > 0){
+						$error = "Đã có sản phẩm chứa danh mục này";
 
 					} else {
+						$where = array(
+							'id' => $id
+						);
+						if($this->category_model->delete($where)){
 
-						$error = "Xóa không thành công";
+							$success = "Xóa thành công";
 
+						} else {
+
+							$error = "Xóa không thành công";
+
+						}
 					}
-
 
 				} else {
 					$error = "Yêu cầu không hợp lệ";

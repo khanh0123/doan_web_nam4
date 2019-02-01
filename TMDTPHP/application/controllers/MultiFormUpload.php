@@ -41,7 +41,7 @@ class MultiFormUpload {
 
 		$type = $this->file['type'];
 		$match = ['image/jpg','image/jpeg','image/gif','image/png'];
-		if($type != $match[0] && $type != $match[1] && $type != $match[2] && $type != $match[3]){
+		if(!in_array($type, $match)){
 			$this->error = "Sai định dạng file ".$type;
 			return false;
 		}

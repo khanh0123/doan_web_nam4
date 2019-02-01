@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 require 'MultiFormUpload.php';
 
 class Product extends CI_Controller {
-	private $num_per_page = 12;
+	private $num_per_page = 5;
 
 	public function __construct()
 	{
@@ -528,7 +528,8 @@ class Product extends CI_Controller {
 
 			$name_category = $_GET['setpage'];
 
-			$page = (isset($_GET['page']) && is_numeric($_GET['page'])) ? (int)$_GET['page'] : 1 ;
+			$page = (isset($_GET['page']) && is_numeric($_GET['page']) && (int)$_GET['page'] > 0) ? (int)$_GET['page'] : 1 ;
+			
 
 			$data_category = $this->category_model->get();
 			foreach ($data_category as $value) {

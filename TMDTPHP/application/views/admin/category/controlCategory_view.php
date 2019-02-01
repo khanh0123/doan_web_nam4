@@ -56,7 +56,7 @@
 								<fieldset class="form-group hidden-xs-up ">
 									<input type="text" class="form-control name-edit" value="<?= $value['name'] ?>" style="color: white">									
 								</fieldset>
-								<div class="name-category"><?= $value['name'] ?></div>
+								<div class="name-category"><?= $value['name']."(".$value['count'].")" ?></div>
 							</blockquote>
 						</div>
 					</div>

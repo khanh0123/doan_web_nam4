@@ -280,7 +280,7 @@ class Account extends CI_Controller {
 
 			session_destroy();
 
-			Header('Location: '.$_SERVER['PHP_SELF']);
+			Header('Location: '.base_url());
 
 
 		} else {

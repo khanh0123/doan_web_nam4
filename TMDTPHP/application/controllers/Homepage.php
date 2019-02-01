@@ -294,7 +294,7 @@ class Homepage extends CI_Controller {
 	{
 		define("numperpage", 10);
 		$query = isset($_GET['q']) ? preg_replace("/(?![a-zA-Z0-9.\ ].*$)/","",$_GET['q'])  : '';
-		$page = isset($_GET['p']) ? $_GET['p'] : 1;
+		$page = (isset($_GET['page']) && is_numeric($_GET['page']) && (int)$_GET['page'] > 0) ? (int)$_GET['page'] : 1 ;
 		$data_category = $this->category_model->get();
 
 		if( ! empty($query)) {
